@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@mysten/sui": "^1.14.1",
+    "@types/node": "^22.8.7",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.5",
+    "prettier": "^3.1.1",
+    "prettier-plugin-move": "file:../../sui/external-crates/move/crates/move-analyzer/prettier-plugin",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "test": "npx tsx tests/e2e/tests.ts",
+    "mintElement": "npx tsx scripts/mintElement.ts",
+    "mint": "npx tsx scripts/mint.ts",
+    "create": "npx tsx scripts/CreateCollection.ts",
+    "mintAvatar": "npx tsx scripts/sponsoredMintAvatar.ts",
+    "transfer": "npx tsx scripts/transfer.ts",
+    "deploy": "npx tsx scripts/test.ts",
+    "atomic": "npx tsx scripts/atomic.ts"
+  }
+}

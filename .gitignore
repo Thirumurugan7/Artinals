@@ -1,0 +1,13 @@
+# IDE
+**/.history/
+**/.vscode/
+**/.idea/
+
+# Move build directory
+build
+Move.lock
+.coverage_map.mvcov
+.env
+
+**/node_modules/
+package-lock.json
