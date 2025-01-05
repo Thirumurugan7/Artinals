@@ -54,27 +54,32 @@ async function main() {
       typeArguments: ["0xa6bb9e053fd0d03afa99945c35a40953e0b30f986d451be005a860fcd171d60e::artfi::ARTFI"],
     });
 
+
+    console.log("zerocoin", zeroCoin)
     // Main mint call with correct BCS serialization
     txMintElement.moveCall({
       target: `${PACKAGE_ADDRESS}::ART20::mint_art20`,
       typeArguments: ["0xa6bb9e053fd0d03afa99945c35a40953e0b30f986d451be005a860fcd171d60e::artfi::ARTFI"],
       arguments: [
-        txMintElement.pure.string("Fire"),
+        txMintElement.pure.string("Aether NFT"),
         txMintElement.pure.string("Symbolizes emotions, intuition, and adaptability. Water flows and adjusts, much like nature."),
         txMintElement.pure.u64("0"),
         txMintElement.pure.u64("0"),
-        txMintElement.pure.string("https://bafybeihhsj546mz6ejplnc35bixw24ka6e7wwxgdys6phv2r4v3ti66pri.ipfs.w3s.link/water.png"),
-        txMintElement.pure.string("https://bafybeihhsj546mz6ejplnc35bixw24ka6e7wwxgdys6phv2r4v3ti66pri.ipfs.w3s.link/water%20mini.png"),
-        txMintElement.pure.string("Fire"),
-        txMintElement.object("0x957f7a60a0c41aa9eb4d2f253fdbf0d4b6b72701bfa06975597c94f124478733"),
+        txMintElement.pure.string("https://www.artfishare.com/"),
+        txMintElement.pure.string("https://amaranth-many-armadillo-855.mypinata.cloud/ipfs/QmS9eZM5nXaEyM7uie3az7xvmmmU6BzJ6suYEZPaFB1QWg"),
+        txMintElement.pure.string("Aether"),
+        
+        txMintElement.object("0x9e069015157df85830c9aacb4c9b0394f6c7320b6152fec738ae865f59a270d3"),
         txMintElement.pure.bool(true),
-        txMintElement.pure.bool(false),
-        txMintElement.object("0xc8f12179e66acbe980b393de79855455d80a13189a96457cc6d76a3ab2557de4"),
-        txMintElement.object("0x8f98907ff692d86ebd33ac5822c39c9aeb1994aee655582c75081f12c36d7faa"),
+        txMintElement.pure.bool(true),
+        txMintElement.object("0x78ac03ae18afa19eb73ba2494a7eaeeb2b0ad9a30ecb4bda8ab669bde303954f"), // tokenId counter from deployment
+        txMintElement.object("0x60a341eac61baf6d9571011ad497fac7c75a1b09e096cdfd5b9a74505c64bca1"), //fee config from deployment
         zeroCoin,
         txMintElement.object("0x6")
       ],
     });
+
+    
 
     txMintElement.setGasBudget(500000000);
 

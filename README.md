@@ -27,7 +27,7 @@ In the [scripts](./scripts/) folder you can find examples of how to interact wit
  - The Sui CLI command for deploying the package is the following:
  
     ```
-    sui client publish --gas-budget <gas_budget>
+    sui client publish --gas-budget 200000000
     ```
    
     For the gas_budget, we can use a standard value like `200000000`, but this does not mean that this value will be sufficient for each of the operations.
@@ -52,3 +52,12 @@ In the [scripts](./scripts/) folder you can find examples of how to interact wit
 Make sure you have the latest stable version of Node.js and npm installed.
 
     
+
+
+    sui client call --package 0x6fb5b6c0ea8e88de1c417b3b20bab5cf32aa414562ef5f4b0fb25a4dfbbb3077 \
+    --module ART20 \
+    --function set_fee \
+    --type-args 0xa6bb9e053fd0d03afa99945c35a40953e0b30f986d451be005a860fcd171d60e::artfi::ARTFI \
+    --args 0x60a341eac61baf6d9571011ad497fac7c75a1b09e096cdfd5b9a74505c64bca1 \
+           0 \
+    --gas-budget 100000000

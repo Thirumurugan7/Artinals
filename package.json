@@ -18,6 +18,7 @@
     "mintAvatar": "npx tsx scripts/sponsoredMintAvatar.ts",
     "transfer": "npx tsx scripts/transfer.ts",
     "deploy": "npx tsx scripts/test.ts",
+    "auto": "npx tsx scripts/auto.ts",
     "atomic": "npx tsx scripts/atomic.ts"
   }
 }

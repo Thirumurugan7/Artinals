@@ -58,9 +58,9 @@ console.log("user balance", userBalances.data);
     txMintElement.moveCall({
       target: `${PACKAGE_ADDRESS}::ART20::mint_additional_art20`,
       arguments: [
-        txMintElement.object("0x1ff9ffc9b363ca2e2671e47754f313557e6dfd617272b16d60dff44170d3738f"), //collection cap  it is created when mint_art20 function is called
-        txMintElement.pure.u64(2), // no of nft to be minted 
-        txMintElement.object("0xd85ce3a747fcc08bb9d80ec61a3b5fcd1e5aa225774348617f714c5a31316b4a"), // TokenIdCounter // get it from deployment
+        txMintElement.object("0xf12e9d5428241fe428f59c2b550d302d07599adf8d4f63042f954082d73b59a7"), //collection cap  it is created when mint_art20 function is called
+        txMintElement.pure.u64(1), // no of nft to be minted 
+        txMintElement.object("0x78ac03ae18afa19eb73ba2494a7eaeeb2b0ad9a30ecb4bda8ab669bde303954f"), // TokenIdCounter // get it from deployment
         txMintElement.object(userBalanceId), // Now using type-checked userBalanceId 
         txMintElement.object("0x6"), //clock
       ],

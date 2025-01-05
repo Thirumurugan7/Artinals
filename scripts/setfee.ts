@@ -39,7 +39,7 @@ console.log("client", client);
     }
 
     const gasCoin = coins.data[0];
-    const feeCoin = coins1.data[0];  // Using second coin for fee payment
+    const feeCoin = coins1.data[1];  // Using second coin for fee payment
     console.log("Using gas coin:", gasCoin.coinObjectId);
     console.log("Using fee coin:", feeCoin.coinObjectId);
 
@@ -57,7 +57,7 @@ console.log("client", client);
 
     txMintElement.moveCall({
       target: `${PACKAGE_ADDRESS}::ART20::mint_art20`,
-      // typeArguments: ["0x2::sui::SUI"],
+      typeArguments: ["0x2::sui::SUI"],
       arguments: [
         txMintElement.pure.string("Water Collection"), // name
         txMintElement.pure.string("Symbolizes emotions, intuition, and adaptability. Water flows and adjusts, much like nature."), //description
@@ -71,7 +71,7 @@ console.log("client", client);
         txMintElement.pure.bool(false), // has_deny_list_authority
         txMintElement.object("0x430f58f1f3fbdbebf0b7465f6ff4f65db97c3adfb87d4ad72dd55afe59354738"), // tokenId counter from deployment
         txMintElement.object("0x5e3040ef360179e1732be9e3a5bb1e50b471d0b0b98221f3818f3573a6927028"), //fee config from deployment
-        txMintElement.object(gasCoin.coinObjectId),  // Using different coin for fee payment 
+        txMintElement.object(""),  // Using different coin for fee payment 
         txMintElement.object("0x6") //clock
       ],
     });

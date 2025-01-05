@@ -66,11 +66,11 @@ console.log("client", client);
         txMintElement.pure.string("https://bafybeihhsj546mz6ejplnc35bixw24ka6e7wwxgdys6phv2r4v3ti66pri.ipfs.w3s.link/water.png"), //uri
         txMintElement.pure.string("https://bafybeihhsj546mz6ejplnc35bixw24ka6e7wwxgdys6phv2r4v3ti66pri.ipfs.w3s.link/water%20mini.png"), //logo uri
         txMintElement.pure.string("Water"), //collection name, first call create collecrion function to create a colelction
-        txMintElement.object("0x957f7a60a0c41aa9eb4d2f253fdbf0d4b6b72701bfa06975597c94f124478733"), // category registry from deployment
+        txMintElement.object("0x9e069015157df85830c9aacb4c9b0394f6c7320b6152fec738ae865f59a270d3"), // category registry from deployment
         txMintElement.pure.bool(true), // ismutable
-        txMintElement.pure.bool(false), // has_deny_list_authority
-        txMintElement.object("0xc8f12179e66acbe980b393de79855455d80a13189a96457cc6d76a3ab2557de4"), // tokenId counter from deployment
-        txMintElement.object("0x8f98907ff692d86ebd33ac5822c39c9aeb1994aee655582c75081f12c36d7faa"), //fee config from deployment
+        txMintElement.pure.bool(true), // has_deny_list_authority
+        txMintElement.object("0x78ac03ae18afa19eb73ba2494a7eaeeb2b0ad9a30ecb4bda8ab669bde303954f"), // tokenId counter from deployment
+        txMintElement.object("0x60a341eac61baf6d9571011ad497fac7c75a1b09e096cdfd5b9a74505c64bca1"), //fee config from deployment
         txMintElement.object("0x8f98907ff692d86ebd33ac5822c39c9aeb1994aee655582c75081f12c36d7faa"),  // Using different coin for fee payment 
         txMintElement.object("0x6") //clock
       ],
