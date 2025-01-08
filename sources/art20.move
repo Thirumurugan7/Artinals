@@ -559,7 +559,7 @@ public entry fun transfer_admin_cap(
     clock: &Clock,
     ctx: &mut TxContext
 ) {
-    assert!(collection_cap.is_mintable, E_NOT_MINTABLE);
+    assert!(collection_cap.is_mintable, 0);
     assert!(tx_context::sender(ctx) == collection_cap.creator, 2);
     assert!(collection_cap.max_supply == 0 || collection_cap.current_supply + amount <= collection_cap.max_supply, 2);
     assert!(user_balance.collection_id == object::uid_to_inner(&collection_cap.id), 0);

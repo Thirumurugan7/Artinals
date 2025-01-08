@@ -34,9 +34,9 @@ async function main() {
   txMintElement.moveCall({
     target: `${packageAddress}::ART20::create_category`,
     arguments: [
-      txMintElement.object("0x9e069015157df85830c9aacb4c9b0394f6c7320b6152fec738ae865f59a270d3"), //cateogry registry
+      txMintElement.object("0x892677b7488b09254718bee0816fe843483d67c3097a71d47288a7896f2cd398"), //cateogry registry
       txMintElement.pure.string("Aether"),
-      txMintElement.pure.string("Aether Element collection"),
+      txMintElement.pure.string("Aether collection"),
       txMintElement.object("0x6"),
     ],
   });

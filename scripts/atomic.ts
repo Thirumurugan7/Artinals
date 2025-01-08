@@ -55,9 +55,9 @@ async function main() {
       digest: gasCoin.digest
     }]);
 
-    const COLLECTION_CAP = "0xf12e9d5428241fe428f59c2b550d302d07599adf8d4f63042f954082d73b59a7";
-    const TOKEN_COUNTER = "0x78ac03ae18afa19eb73ba2494a7eaeeb2b0ad9a30ecb4bda8ab669bde303954f";
-    const RECIPIENT_ADDRESS = "0xd001f2c15bee14d18acb25985ecdc939acf239455312b51e318a60b66bdaded8";
+    const COLLECTION_CAP = "0x216741680977f593b5f94ded0b964f6ee13e9c195dd2fe08f8e306ce0c0764d0";
+    const TOKEN_COUNTER = "0x9981cddcf2c9053dd0363ba0ae628a3741e3f1a8609142071be9d7698c3f9549";
+    const RECIPIENT_ADDRESS = "0xc182b49a9ca8dee83125ae1a5dac58ff91b6ff394a821d905c7314bf580ed4b1";
 
     // First mint call
    const mint =  tx.moveCall({

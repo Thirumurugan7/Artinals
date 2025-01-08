@@ -51,7 +51,7 @@ async function main() {
     // Create zero coin for fee
     const zeroCoin = txMintElement.moveCall({
       target: "0x2::coin::zero",
-      typeArguments: ["0xa6bb9e053fd0d03afa99945c35a40953e0b30f986d451be005a860fcd171d60e::artfi::ARTFI"],
+      typeArguments: ["0x706fa7723231e13e8d37dad56da55c027f3163094aa31c867ca254ba0e0dc79f::artfi::ARTFI"],
     });
 
 
@@ -59,21 +59,21 @@ async function main() {
     // Main mint call with correct BCS serialization
     txMintElement.moveCall({
       target: `${PACKAGE_ADDRESS}::ART20::mint_art20`,
-      typeArguments: ["0xa6bb9e053fd0d03afa99945c35a40953e0b30f986d451be005a860fcd171d60e::artfi::ARTFI"],
+      typeArguments: ["0x706fa7723231e13e8d37dad56da55c027f3163094aa31c867ca254ba0e0dc79f::artfi::ARTFI"],
       arguments: [
-        txMintElement.pure.string("Aether NFT"),
-        txMintElement.pure.string("Symbolizes emotions, intuition, and adaptability. Water flows and adjusts, much like nature."),
+        txMintElement.pure.string("Aether Element"),
+        txMintElement.pure.string("Represents unity and the source of all elements, symbolizing creation and individuality."),
         txMintElement.pure.u64("0"),
         txMintElement.pure.u64("0"),
-        txMintElement.pure.string("https://www.artfishare.com/"),
-        txMintElement.pure.string("https://amaranth-many-armadillo-855.mypinata.cloud/ipfs/QmS9eZM5nXaEyM7uie3az7xvmmmU6BzJ6suYEZPaFB1QWg"),
+        txMintElement.pure.string("https://www.artfitoken.io"),
+        txMintElement.pure.string("https://bafybeihhsj546mz6ejplnc35bixw24ka6e7wwxgdys6phv2r4v3ti66pri.ipfs.w3s.link/aether.png"),
         txMintElement.pure.string("Aether"),
         
-        txMintElement.object("0x9e069015157df85830c9aacb4c9b0394f6c7320b6152fec738ae865f59a270d3"),
+        txMintElement.object("0x892677b7488b09254718bee0816fe843483d67c3097a71d47288a7896f2cd398"), //category registry
         txMintElement.pure.bool(true),
         txMintElement.pure.bool(true),
-        txMintElement.object("0x78ac03ae18afa19eb73ba2494a7eaeeb2b0ad9a30ecb4bda8ab669bde303954f"), // tokenId counter from deployment
-        txMintElement.object("0x60a341eac61baf6d9571011ad497fac7c75a1b09e096cdfd5b9a74505c64bca1"), //fee config from deployment
+        txMintElement.object("0xf781a0c005c59d11bb540a1b3d916ffbf6abd0b0c241a469b702b68fd790ad92"), // tokenId counter from deployment
+        txMintElement.object("0xb88c99b9e703b09452dff057ee8d008e8d463e328ed9bdcc38f4d18ec4545630"), //fee config from deployment
         zeroCoin,
         txMintElement.object("0x6")
       ],
